@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - Docker
+
+before_install:
+  - docker build -t brunokiafuka/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true brunokiafuka/docker-react yarn test
