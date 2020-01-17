@@ -3,7 +3,7 @@ services:
   - Docker
 
 before_install:
-  - docker build -t brunokiafuka/devRadar .
+  - docker build -t brunokiafuka/dev-radar .
 
 script:
-  - docker run -e CI=true brunokiafuka/devRadar yarn test
+  - docker run -e CI=true brunokiafuka/dev-radar yarn test
